@@ -2,8 +2,6 @@ This page is intended to provide a resource for setting really quick office beac
 
 File an issue on the repo/or submit pull request if you would like to add anything.
 
-'''Note:''' 
-
 # Table of Contents
 
 - [Host Design](#host-design)
@@ -13,7 +11,7 @@ File an issue on the repo/or submit pull request if you would like to add anythi
 
 # Host Design
 
-See [./server/build.sh] for source. The script needs to be edited beforehand to ensure that appropriate IPs are added in ALLOW_IP variable. Yes its not clever but sets up the box as needed.
+See [server/build.sh] for source. The script needs to be edited beforehand to ensure that appropriate IPs are added in ALLOW_IP variable. Yes its not clever but sets up the box as needed.
 
 The script performs the following actions:
 
@@ -28,11 +26,15 @@ The script performs the following actions:
 
 Beacon design is equally simple. All we are doing is inserting tracking URL as noted below that points to tracking server.
 
+The steps below show how to add working beacon to word document.
 
-
-
-
-
+![Alt text](beackon/start.png?raw=true "Step1")
+![Alt text](beackon/step1.png?raw=true "Step2")
+![Alt text](beackon/step2.png?raw=true "Step3")
+![Alt text](beackon/step3.png?raw=true "Step4")
+![Alt text](beackon/step4.png?raw=true "Step5")
+![Alt text](beackon/step5.png?raw=true "Step6")
+![Alt text](beackon/step6-custom.png?raw=true "Step7")
 
 
 
@@ -46,3 +48,6 @@ HTTP traffic can be easily handed using socat as 'proxy' between
 socat TCP4-LISTEN:80,fork TCP4:<DESTINATION>:<DESTINATION PORT>
 ```
 
+# Notes
+
+* Beacon doesn't work unless "enabled content" warning is dismissed. By default any fields in document from either network share or 'Internet' are blocked.
