@@ -1,4 +1,4 @@
-This page is intended to provide a resource for setting really quick MS Office beacon & tracking box that can be used to identify if somebody opened an Office document submitted during initial phishing exercise. The aim is to capture timestamp/IP and unique ID without creating massive noise or need for macro documents. The resulting infrastructure & beacon should help to measure if it’s possible to get through email filters & corporate proxy quickly without much fuss.
+This page is intended to provide quick reference guide for creating tracking beackon that can be inserted into MS Office documents. The aim of the exercise is to capture timestamp/IP and unique ID without need for macro in document. The resulting infrastructure & beacon should help to measure if it’s possible to get through email filters & corporate proxy and if document was successfully opened.
 
 File an issue on the repo/or submit pull request if you would like to add anything.
 
@@ -6,9 +6,9 @@ File an issue on the repo/or submit pull request if you would like to add anythi
 
 - [Host Design](#host-design)
 - [Beacon Design](#beacon-design)
-- [Socat](#Socat)
+- [Socat](#socat)
 - [Beacon Output](#beacon-output)
-- [Notes](#Notes)
+- [Notes](#notes)
 
 
 # Host Design
@@ -23,34 +23,45 @@ The script will perform the following actions:
 * Add tracking script as index.php
 * Add .htaccess file hinding .php extension
 * Configured IPTABLES to allow only specific IPs to access SSH but leaves 443/80 ports open for the world. As defined by ALLOW_IP variable.
+* Change Apache config to enable mod_rewrite
+* Disable IPv6
+* Disable NTP service
 
 After configuration all requests will be stored in /var/www/html/cookies/ folder (easily changable in source code) however. By default this folder is open to the world.
 
 # Beacon Design
 
-Beacon design is equally simple. All we are doing is inserting tracking URL as noted below that points to tracking server. Adding tracking image to document header/footer and covering it with white overlay seems to work quite nice.
+Beacon design is equally simple. All we are doing is inserting tracking URL as noted below that points to tracking server and /index?id=XXXXXX (replace XXXXXX with any value). Adding tracking image to document header/footer and covering it with white overlay seems to work quite nice.
 
 The steps below show how to add working beacon to word document.
 
 **Open up document**
+
 ![Alt text](beacon/start.png?raw=true "Step1")
+
 **Open Quick Parts > Field**
+
 ![Alt text](beacon/step1.png?raw=true "Step2")
+
 **Scroll down to IncludePicture field and insert URL to server. Tick "Data not stored with document"**
+
 ![Alt text](beacon/step2.png?raw=true "Step3")
-**Finally remove any misc data from the document**
+
+**Finally remove any uncessary data from the document**
+
 ![Alt text](beacon/step3.png?raw=true "Step4")
 ![Alt text](beacon/step4.png?raw=true "Step5")
 ![Alt text](beacon/step5.png?raw=true "Step6")
+
 **And cover inserted URL field with white rectangle (remember to remove borders etc)**
+
 ![Alt text](beacon/step6-custom.png?raw=true "Step7")
 
 
 # Socat 
 
-Sometimes its necessary to use socat for redirections if there is redirection box in front of the tracker. This can be easily achieved using following commands:
+Sometimes its necessary to use socat for redirections if there is external box in front of the tracker. This can be easily achieved using following commands:
 
-HTTP traffic can be easily handed using socat as 'proxy' between 
 ```
 socat TCP4-LISTEN:80,fork TCP4:<DESTINATION>:<DESTINATION PORT>
 ```
