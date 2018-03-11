@@ -24,16 +24,21 @@ The script performs the following actions:
 
 # Beacon Design
 
-Beacon design is equally simple. All we are doing is inserting tracking URL as noted below that points to tracking server.
+Beacon design is equally simple. All we are doing is inserting tracking URL as noted below that points to tracking server. My personal preference is to add tracking image into document header and then cover it with white overlay so that it’s not visible unless somebody inspects document header.
 
 The steps below show how to add working beacon to word document.
 
+**Open up document**
 ![Alt text](beacon/start.png?raw=true "Step1")
+**Open Quick Parts > Field**
 ![Alt text](beacon/step1.png?raw=true "Step2")
+**Scroll down to IncludePicture field and insert URL to server. Tick "Data not stored with document"**
 ![Alt text](beacon/step2.png?raw=true "Step3")
+**Finally remove any misc data from the document"
 ![Alt text](beacon/step3.png?raw=true "Step4")
 ![Alt text](beacon/step4.png?raw=true "Step5")
 ![Alt text](beacon/step5.png?raw=true "Step6")
+**And cover inserted URL field"
 ![Alt text](beacon/step6-custom.png?raw=true "Step7")
 
 
