@@ -70,12 +70,22 @@ cat > /var/www/html/.htaccess << EOL
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)\$ \$1.php [NC,L]
+ErrorDocument 400     /pixel.png
+ErrorDocument 401     /pixel.png
+ErrorDocument 403     /pixel.png
+ErrorDocument 404     /pixel.png
+ErrorDocument 500     /pixel.png
 EOL
 
 # deny access to cookies folder (we only want apache to write there but not for people to browse)
 echo "[+] creating /var/www/html/cookies/.htaccess file"
 cat > /var/www/html/cookies/.htaccess << EOL
 Options All -Indexes
+ErrorDocument 400     /pixel.png
+ErrorDocument 401     /pixel.png
+ErrorDocument 403     /pixel.png
+ErrorDocument 404     /pixel.png
+ErrorDocument 500     /pixel.png
 Deny From All
 EOL
 

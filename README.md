@@ -27,7 +27,7 @@ The script will perform the following actions:
 * Disable IPv6
 * Disable NTP service
 
-After configuration all requests will be stored in /var/www/html/cookies/ folder (easily changable in source code) however. By default this folder is open to the world.
+After configuration all requests will be stored in /var/www/html/cookies/ folder (easily changable in source code) however. By default this folder is denied to the world.
 
 # Beacon Design
 
