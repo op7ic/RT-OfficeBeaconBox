@@ -28,13 +28,13 @@ Beacon design is equally simple. All we are doing is inserting tracking URL as n
 
 The steps below show how to add working beacon to word document.
 
-![Alt text](beackon/start.png?raw=true "Step1")
-![Alt text](beackon/step1.png?raw=true "Step2")
-![Alt text](beackon/step2.png?raw=true "Step3")
-![Alt text](beackon/step3.png?raw=true "Step4")
-![Alt text](beackon/step4.png?raw=true "Step5")
-![Alt text](beackon/step5.png?raw=true "Step6")
-![Alt text](beackon/step6-custom.png?raw=true "Step7")
+![Alt text](beacon/start.png?raw=true "Step1")
+![Alt text](beacon/step1.png?raw=true "Step2")
+![Alt text](beacon/step2.png?raw=true "Step3")
+![Alt text](beacon/step3.png?raw=true "Step4")
+![Alt text](beacon/step4.png?raw=true "Step5")
+![Alt text](beacon/step5.png?raw=true "Step6")
+![Alt text](beacon/step6-custom.png?raw=true "Step7")
 
 
 
