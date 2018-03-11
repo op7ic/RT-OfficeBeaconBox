@@ -31,9 +31,9 @@ After configuration all requests will be stored in /var/www/html/cookies/ folder
 
 # Beacon Design
 
-Beacon design is equally simple. All we are doing is inserting tracking URL as noted below that points to tracking server and /index?id=XXXXXX (replace XXXXXX with any value). Adding tracking image to document header/footer and covering it with white overlay seems to work quite nice.
+Beacon design is equally simple. All we are doing is inserting tracking URL that points to tracking server /index?id=XXXXXX location (replace XXXXXX with any value). Adding tracking image to document header/footer and covering it with white overlay seems to work quite nice.
 
-The steps below show how to add working beacon to word document.
+The steps below show how to add working beacon to Word document.
 
 **Open up document**
 
