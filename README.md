@@ -21,7 +21,7 @@ The script will perform the following actions:
 * Install apache + php 
 * Crate folder structure in /var/www/html
 * Add tracking script as index.php
-* Add .htaccess file hinding .php extension
+* Add .htaccess file hinding .php extension + add error handling
 * Configured IPTABLES to allow only specific IPs to access SSH but leaves 443/80 ports open for the world. As defined by ALLOW_IP variable.
 * Change Apache config to enable mod_rewrite
 * Disable IPv6
