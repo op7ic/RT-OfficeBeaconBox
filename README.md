@@ -13,7 +13,7 @@ File an issue on the repo/or submit pull request if you would like to add anythi
 
 # Host Design
 
-See [build.sh](server/build.sh) for source. The script needs to be edited beforehand to ensure that appropriate IPs are added in ALLOW_IP variable. Its not clever but sets up the box as needed.
+See [build.sh](server/build.sh) for source on how the box is created. The script needs to be edited beforehand to ensure that appropriate IPs are added in ALLOW_IP variable. Its not clever but sets up the box as needed. Script was tested on Debian 9 x64.
 
 The script will perform the following actions:
 
@@ -83,7 +83,7 @@ The following sample was produced by the beacon tracking script and stored in /v
 
 # Notes
 
-* Beacon doesn't work unless "Enable Content" warning in Office is dismissed. By default any fields in document from either network share or 'Internet' are blocked.
+* Beacon doesn't work unless "Enable Content" warning in Office is dismissed. By default "field" in document is not active when the origin of the document is from either network share or 'Internet'. Office will instead open "Protected View".
 * Don't forget to change index.html to something sensible and do not leave it as start page for apache.
 * HTTPS setup can be done separetly and IPTABLES are opened for this reason. Close them if you don't want/need HTTPS.
 * This setup have been tested on Debian 9.3 x64 so should work on Debian in general. 
