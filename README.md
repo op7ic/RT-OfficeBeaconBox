@@ -1,4 +1,4 @@
-This page is intended to provide quick reference guide for creating tracking beackon that can be inserted into MS Office documents. The aim of the exercise is to capture timestamp/IP and unique ID without need for macro in document. The resulting infrastructure & beacon should help to measure if it’s possible to get through email filters & corporate proxy and if document was successfully opened.
+This page is intended to provide quick reference guide for creating tracking beackon that can be inserted into MS Office documents. The aim of the exercise is to capture timestamp/IP and unique ID without need for macro in document during phishing exercise. The resulting infrastructure & beacon should help to measure if it’s possible to get through email filters & corporate proxy and if document was successfully opened without deplooying any payloads.
 
 File an issue on the repo/or submit pull request if you would like to add anything.
 
